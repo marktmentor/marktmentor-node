@@ -1,0 +1,29 @@
+name: Publish to npm
+
+# Runs on a version tag (v1.2.3), which the release workflow of marktmentor-sdk
+# pushes. Needs the secret NPM_TOKEN in the environment npm.
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # Only v* tags may use this environment. After the repository is public, add
+    # yourself as required reviewer in Settings → Environments → npm.
+    environment: npm
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://registry.npmjs.org
+      - name: Version matches the tag
+        run: test "$(node -p 'require("./package.json").version')" = "${GITHUB_REF_NAME#v}"
+      - run: npm ci && npm test
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
