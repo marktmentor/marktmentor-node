@@ -76,7 +76,7 @@ export class NichesClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         "api/public/v1/research/niches/",
                     ),
                     method: "GET",
@@ -223,7 +223,7 @@ export class NichesClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/`,
             ),
             method: "GET",
@@ -336,7 +336,7 @@ export class NichesClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/review-history/`,
             ),
             method: "GET",
@@ -443,7 +443,7 @@ export class NichesClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/reviews/summary/`,
             ),
             method: "GET",
@@ -550,7 +550,7 @@ export class NichesClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/product-distributions/`,
             ),
             method: "GET",
@@ -698,7 +698,7 @@ export class NichesClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/products/`,
                     ),
                     method: "GET",
@@ -848,7 +848,7 @@ export class NichesClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         `api/public/v1/research/niches/${core.url.encodePathParam(nicheId, errors.MarktMentorError)}/reviews/`,
                     ),
                     method: "GET",

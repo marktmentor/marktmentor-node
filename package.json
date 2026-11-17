@@ -1,8 +1,13 @@
 {
   "name": "@marktmentor/api",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Official SDK for the MarktMentor Public API: bol product research and your own store data.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marktmentor/marktmentor-node.git"
+  },
+  "homepage": "https://api.marktmentor.nl",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -20,7 +25,8 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "test": "npm run build && node --test tests/*.test.mjs"
+    "test": "npm run build && node --test tests/*.test.mjs",
+    "prepack": "npm run build"
   },
   "devDependencies": {
     "@types/node": "22.10.2",

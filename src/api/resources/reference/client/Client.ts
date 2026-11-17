@@ -72,7 +72,7 @@ export class ReferenceClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         "api/public/v1/reference/categories/",
                     ),
                     method: "GET",
@@ -202,7 +202,7 @@ export class ReferenceClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/reference/categories/${core.url.encodePathParam(categoryId, errors.MarktMentorError)}/`,
             ),
             method: "GET",
@@ -302,7 +302,7 @@ export class ReferenceClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 "api/public/v1/reference/brands/",
             ),
             method: "GET",

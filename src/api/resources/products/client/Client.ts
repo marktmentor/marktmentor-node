@@ -108,7 +108,7 @@ export class ProductsClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         "api/public/v1/research/products/",
                     ),
                     method: "GET",
@@ -255,7 +255,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/`,
             ),
             method: "GET",
@@ -371,7 +371,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/sales-history/`,
             ),
             method: "GET",
@@ -487,7 +487,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/visibility-history/`,
             ),
             method: "GET",
@@ -606,7 +606,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/category-rankings/`,
             ),
             method: "GET",
@@ -725,7 +725,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/keyword-rankings/`,
             ),
             method: "GET",
@@ -838,7 +838,7 @@ export class ProductsClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/keywords/`,
                     ),
                     method: "GET",
@@ -984,7 +984,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/sellers/`,
             ),
             method: "GET",
@@ -1104,7 +1104,7 @@ export class ProductsClient {
                     url: core.url.join(
                         (await core.Supplier.get(this._options.baseUrl)) ??
                             (await core.Supplier.get(this._options.environment)) ??
-                            environments.MarktMentorEnvironment.Default,
+                            environments.MarktMentorEnvironment.Production,
                         `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/reviews/`,
                     ),
                     method: "GET",
@@ -1252,7 +1252,7 @@ export class ProductsClient {
             url: core.url.join(
                 (await core.Supplier.get(this._options.baseUrl)) ??
                     (await core.Supplier.get(this._options.environment)) ??
-                    environments.MarktMentorEnvironment.Default,
+                    environments.MarktMentorEnvironment.Production,
                 `api/public/v1/research/products/${core.url.encodePathParam(productCode, errors.MarktMentorError)}/reviews/summary/`,
             ),
             method: "GET",

@@ -1,7 +1,14 @@
 name: Publish to npm
 
 # Runs on a version tag (v1.2.3), which the release workflow of marktmentor-sdk
-# pushes. Needs the secret NPM_TOKEN in the environment npm.
+# pushes. Uses npm Trusted Publishing (GitHub OIDC): no stored token. Needs a
+# trusted publisher on the package @marktmentor/api at npmjs.com (organization
+# marktmentor, repository marktmentor-node, workflow publish.yaml, environment
+# npm) that allows direct npm publish, not only staged publishing. npm can only
+# set that up once the package exists, so the first version is published by
+# hand from a checkout of the tag: npm ci && npm test && npm publish --access
+# public (prepack builds dist/ as well). Then add the trusted publisher; its
+# first publish must follow within 2 days.
 on:
   push:
     tags: ["v*"]
@@ -15,15 +22,18 @@ jobs:
     # Only v* tags may use this environment. After the repository is public, add
     # yourself as required reviewer in Settings → Environments → npm.
     environment: npm
+    permissions:
+      contents: read
+      id-token: write # GitHub OIDC token for npm Trusted Publishing
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 24
           registry-url: https://registry.npmjs.org
+      # Trusted Publishing needs npm 11.5.1 or later.
+      - run: npm install -g npm@11.21.2
       - name: Version matches the tag
         run: test "$(node -p 'require("./package.json").version')" = "${GITHUB_REF_NAME#v}"
       - run: npm ci && npm test
       - run: npm publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,8 +1,8 @@
-# Marktmentor TypeScript Library
+# MarktMentor TypeScript Library
 
-[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=Marktmentor%2FTypeScript)
+[![fern shield](https://img.shields.io/badge/%F0%9F%8C%BF-Built%20with%20Fern-brightgreen)](https://buildwithfern.com?utm_source=github&utm_medium=github&utm_campaign=readme&utm_source=MarktMentor%2FTypeScript)
 
-The Marktmentor TypeScript library provides convenient access to the Marktmentor APIs from TypeScript.
+The MarktMentor TypeScript library provides convenient access to the MarktMentor APIs from TypeScript.
 
 ## Table of Contents
 
@@ -68,7 +68,7 @@ This SDK allows you to configure different environments for API requests.
 import { MarktMentorClient, MarktMentorEnvironment } from "MarktMentor";
 
 const client = new MarktMentorClient({
-    environment: MarktMentorEnvironment.Default,
+    environment: MarktMentorEnvironment.Production,
 });
 ```
 
