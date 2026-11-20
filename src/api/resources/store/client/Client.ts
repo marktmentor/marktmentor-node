@@ -16,7 +16,7 @@ export declare namespace StoreClient {
 }
 
 /**
- * Read the data of your own connected bol store: store performance, performance per product and stock per product. Each call gives one kind of data. Needs an API key or OAuth with store:read, a connected store and the Pro plan or higher. Store requests are free: they do not count toward the API bundle. Limit: 60 requests per minute per organization.
+ * Read the data of your own connected bol store: store performance, performance per product and stock per product. Each call gives one kind of data. Needs an API key or OAuth with store:read, a connected store and a paid MarktMentor Premium subscription or higher. Store requests are free: they do not count toward the API bundle. Limit: 60 requests per minute per organization.
  */
 export class StoreClient {
     protected readonly _options: NormalizedClientOptionsWithAuth<StoreClient.Options>;

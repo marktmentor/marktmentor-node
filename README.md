@@ -3,11 +3,17 @@
 Official TypeScript SDK for the [MarktMentor Public API](https://api.marktmentor.nl):
 bol product research and your own store data.
 
+```sh
+npm install @marktmentor/api
+```
+
 Try it without an account with the public test key `mm_test_demo`: it answers
 every endpoint with fixed example data (product `9300000138905032`, niche
 `6797`), free. See <https://api.marktmentor.nl/guides/test-key>.
 
 ```ts
+import { MarktMentorClient } from "@marktmentor/api";
+
 const demo = new MarktMentorClient({ token: "mm_test_demo" });
 console.log((await demo.products.get("9300000138905032")).data.title);
 ```

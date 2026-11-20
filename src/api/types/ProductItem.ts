@@ -10,6 +10,7 @@ export interface ProductItem {
     /** Name of the product family (its variant group). */
     familyName: string | null;
     imageUrl: string | null;
+    /** The first day MarktMentor saw the product on bol. For a product that came on bol after MarktMentor started to follow its category, this is about its launch date. An older product can be on bol for longer. */
     availableSince: string | null;
     /** Average rating over all reviews, in stars from 1 to 5. */
     rating: number | null;

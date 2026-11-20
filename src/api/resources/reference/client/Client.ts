@@ -16,7 +16,7 @@ export declare namespace ReferenceClient {
 }
 
 /**
- * Look up the values that the filters need: bol categories and brand names. These calls are free: they do not consume research requests. They work with every API key or OAuth connection. Limit: 120 requests per minute per organization.
+ * Look up the values that the filters need: bol categories and brand names. These calls are free: they do not consume research requests. They need a paid MarktMentor Premium subscription or higher, but no bundle and no accepted terms. Limit: 120 requests per minute per organization.
  */
 export class ReferenceClient {
     protected readonly _options: NormalizedClientOptionsWithAuth<ReferenceClient.Options>;
